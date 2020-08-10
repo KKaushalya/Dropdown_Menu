@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: thistle;
+    font-family: cursive;
+}
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li{
+    color: dimgray;
+    display: inline-block;
+    padding: 12px;
+    position: relative;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: dimgray;
+}
+
+/* Hide nested ul by default */
+#navbar ul li ul{
+    display: none;
+}
+
+#navbar ul li:hover{
+    cursor: pointer;
+    background-color:mediumorchid;
+    color: mintcream;
+}
+
+#navbar ul li:hover a{
+    color: mintcream;
+}
+/* dropdown show */
+#navbar ul li:hover ul{
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    width: 200px;
+}
+
+#navbar ul li:hover ul li{
+    display: block;
+    background-color: plum;
+}
+
+#navbar ul li:hover ul li a{
+     color: dimgray;
+}
+
+#navbar ul li:hover ul li:hover{
+    background-color: linen;
+    color: inherit;
+}
+
+#navbar ul li:hover ul li span{
+    float: right;
+    color:whitesmoke;
+    background-color:mediumorchid ;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span{
+    background-color: orchid;
+}
+
+#showcase{
+    font-size: 30px;
+    color: mintcream;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: mediumorchid;
+}
+
+@media(max-width:600px){
+    #navbar ul li{
+        display: block;
+    }
+
+    #navbar ul li:hover ul{
+        width: 100%;
+        position: relative;
+    }
+}
+
+
